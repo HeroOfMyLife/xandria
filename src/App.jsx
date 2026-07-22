@@ -8,70 +8,70 @@ const acgnData = [
     id: 1, 
     title: 'Vampire Hunter D: Bloodlust', 
     type: 'Anime',
-    image: '/vampire-hunter-d.jpg',
+    image: '/images/vampire-hunter-d.jpg',
     year: 1995
   },
   { 
     id: 2, 
     title: 'Overbleed', 
     type: 'Manga',
-    image: '/overbleed.jpg',
+    image: '/images/overbleed.jpg',
     year: 1989
   },
   { 
     id: 3, 
     title: 'Dragon Ball Online', 
     type: 'Game',
-    image: '/dragonball-online.jpg',
+    image: '/images/dragonball-online.jpg',
     year: 2022
   },
   { 
     id: 4, 
     title: 'Mobseka', 
     type: 'Light Novel',
-    image: '/Mobuseka.jpg',
+    image: '/images/Mobuseka.jpg',
     year: 2009
   },
   { 
     id: 5, 
     title: 'Wakfu', 
     type: 'Manfra',
-    image: '/wakfu.jpg',
+    image: '/images/wakfu.jpg',
     year: 1998
   },
   { 
     id: 6, 
     title: 'Undertale', 
     type: 'Game',
-    image: '/undertale.jpg',
+    image: '/images/undertale.jpg',
     year: 2017
   },
   { 
     id: 7, 
     title: 'Yongbi the Invincible', 
     type: 'Manhwa',
-    image: '/Yongbi.jpg',
+    image: '/images/Yongbi.jpg',
     year: 2018
   },
   { 
     id: 8, 
     title: 'Grimgar of Fantasy and Ash', 
     type: 'Light Novel',
-    image: '/Grimgar.jpg',
+    image: '/images/Grimgar.jpg',
     year: 2012
   },
   { 
     id: 9, 
     title: 'Reverend Insanity', 
     type: 'Webnovel',
-    image: '/reverend-insanity.jpg',
+    image: '/images/reverend-insanity.jpg',
     year: 2018
   },
   { 
     id: 10, 
     title: 'World After the fall', 
     type: 'Manhwa',
-    image: '/theworldafterthefall.jpg',
+    image: '/images/theworldafterthefall.jpg',
     year: 2020
   },
 ];
@@ -101,7 +101,7 @@ function App() {
 
   return (
     <div className="container">
-      <h1 className="header">📚 Xandria: ACGN Tracker</h1>
+      <h1 className="header">📚 Xandria: ACGN Tracker👌</h1>
       
       {/* Category Filter */}
       <div className="category-filter">
@@ -120,9 +120,7 @@ function App() {
         {filteredData.map(item => (
           <div key={item.id} className="card">
             <div className="card-image">
-              <img src={item.image} alt={item.title} onError={(e) => {
-                e.target.src = 'https://via.placeholder.com/300x450?text=No+Image';
-              }} />
+              <img src={item.image} alt={item.title} style={{ width: '100%', height: 'auto' }} />
             </div>
             <div className="card-content">
               <div className="card-header">
